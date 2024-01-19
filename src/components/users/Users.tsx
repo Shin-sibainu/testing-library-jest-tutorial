@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 export const Users = () => {
   const [users, setUsers] = useState<string[]>([])
-  const [error, setError] = useState<string | null>(null)
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((res) => res.json())
